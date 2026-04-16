@@ -1,0 +1,78 @@
+html, body {
+    margin: auto auto;
+    padding: 0;
+    width: 375px;
+    font-family: "Source Sans 3", sans-serif;
+}
+@keyframes myAnimation {
+  from {height: 22.13px;}
+  to {height: 30px;}
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+}
+.container{
+    background-color: #EDEDED;
+}
+/* logo image */
+.logo-img{
+height: 5rem;
+}
+/* user avatar */
+.user-avatarpic{
+    border-radius: 200px;
+    height: 2rem;
+    margin: auto 0;
+}
+.user-info{
+    display: flex;
+    color: black;
+    background-color: #FFFFFF;
+}
+.post-image{
+    height: 375px;
+    width: 375px;
+}
+.bolder{
+    font-weight: 900;
+}
+.bold{
+    font-weight: 500;
+}
+.icon,
+.like-count,
+.username
+{
+    padding-left: 5px;
+
+}
+.icon{
+    background-color: #FFFFFF;
+}
+.icon-size{
+    height: 22.13px;
+}
+.bottom-postdiv{
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+}
+.icon-hover:hover,.icon-hover:focus{
+   transform: scale(1.5);
+   transition: transform 0.3s ease-out; 
+}
+/* contains all content */
+/* .container{
+} */
+/* header of each post */
+
+/* .post-header{
+
+} */
+/* content of post */
+
+/* .post-content{
+
+
+} */
