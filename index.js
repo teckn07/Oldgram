@@ -1,5 +1,6 @@
 let userinfotxt = document.querySelector('.render-post');
 const spans = document.querySelector(".likecountnum")
+const likebtn = document.querySelectorAll('.heart');
 const formatter = new Intl.NumberFormat('en-US');
 
 const posts = [
@@ -31,10 +32,11 @@ const posts = [
         likes: 15137
     }
 ]
-function updatelike()
+function updatelike(index)
 {
-console.log("clicked")
+console.log(index)
 }
+
 function getpost()
 {
     let userpostembed = "";
@@ -58,8 +60,8 @@ function getpost()
         </div>
 
         <div class="icon">
-            <img class="heart icon-hover icon-size" type="button" src="images/icon-heart.png">
-            <img class="icon-hover icon-size" type="button" onclick="updatelike()" src="images/thumb-down.png">
+            <img class="heart icon-hover icon-size" type="button" onclick="updatelike()" src="images/icon-heart.png">
+            <img class="icon-hover icon-size" type="button" src="images/thumb-down.png">
             <img class="icon-hover icon-size" type="button" src="images/icon-comment.png">
             <img class="icon-hover icon-size" type="button" src="images/icon-dm.png">
         </div>
@@ -79,4 +81,7 @@ function getpost()
 
 
 getpost();
-updatelike();
+
+likebtn.forEach((btn, index) => {
+    btn.addEventListener('click', () => { updatelike(index) });
+});
